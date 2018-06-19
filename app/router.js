@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('principal');
+  this.route('crear_plantillas');
+  this.route('notificaciones');
 });
 
 export default Router;
