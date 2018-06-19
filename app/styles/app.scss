@@ -1,47 +1,57 @@
 
 @import "ember-cli-bootstrap-4/bootstrap";
-
-.scrollbar {
-    margin-left: 30px;
-    float: left;
-    height: 490px;
-    width: 65px;
-    background: #fff;
-    overflow-y: scroll;
-    margin-bottom: 25px;
-}
-
-.force-overflow {
-    min-height: 450px;
-}
-
-.scrollbar-primary::-webkit-scrollbar {
-    width: 12px;
-    background-color: #F5F5F5;
-}
-
-.scrollbar-primary::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-    background-color: #4285F4;
-}
-/*
-    DEMO STYLE
-*/
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    margin-top: 0 !important;
+    padding-top: 0;
+    padding-right: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
+
+.btn-block{
+    background-color: rgb(13, 108, 185) ;
+    color: white;
+    text-align: start;
+}
+
+.collapse{
+    text-align: start;
+}
+
+.card-header{
+    background-color: gainsboro; 
+    text-align: center;
+}
+
+.soluciones{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.navbar-brand{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.btn-outline-success{
+    color: white;
+}
+
+.container-fluid {
+    color: white;
+    background-color: rgb(13, 108, 185) ;
+}
+
 
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: rgb(49, 58, 83);
 }
 
 a, a:hover, a:focus {
@@ -51,11 +61,9 @@ a, a:hover, a:focus {
 }
 
 .navbar {
-    padding: 15px 10px;
-    background-color: #fff;
-    border: none;
+    background-color: rgb(13, 108, 185) ;
+    border: outset;
     border-radius: 0;
-    margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -156,6 +164,8 @@ i, span {
     font-size: 1.1em;
     display: block;
 }
+
+
 #sidebar ul li a:hover {
     color: rgb(13, 108, 185);
     background: #fff;
@@ -182,6 +192,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     font-family: 'Glyphicons Halflings';
     font-size: 0.6em;
 }
+
 a[aria-expanded="true"]::before {
     content: '\e260';
 }
@@ -276,4 +287,30 @@ a.article, a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+
+.scrollbar {
+    margin-left: 30px;
+    float: left;
+    height: 490px;
+    width: 65px;
+    background: #fff;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+.force-overflow {
+    min-height: 450px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #4285F4;
 }

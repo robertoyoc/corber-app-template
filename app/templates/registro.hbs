@@ -1,0 +1,113 @@
+<div class="container-fluid py-2" style="background-color: rgb(13, 108, 185)">
+    <nav class="nav navbar-nav navbar-expand-sm bg-faded" style="font-family: Georgia, 'Times New Roman', Times, serif">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="nav-content">
+            <ul class="navbar-nav">
+                <li>
+                    <div class="=colxl-4">
+                        <!-- Brand -->
+                        <a class="navbar-brand" style="color: white" href="#">
+                            <h2>WhiteHub</h2>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse col-xl-10 justify-content-end" id="nav-content">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <div class="col-xl-12">
+                       {{#link-to "principal" class="btn btn-primary"}}Home{{/link-to}}
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="col-xl-12">
+                        <a class="nav-link" style="color: white" href="#">Acerca De</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="col-xl-12">
+                       {{#link-to "login" class="btn btn-outline-success"}}Login{{/link-to}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<form id="frmLoginCliente">
+    <div class="container bg-light">
+        <div class="row" style="align-items: center;display: flex;justify-content: center; padding: 3rem">
+            <div class="card" style="font-family: Georgia, 'Times New Roman', Times, serif; width: 50rem">
+                <div class="card-header" style="background-color: rgb(13, 108, 185)">
+                    <h2 style="color: white; text-align: center; height: 20px;">Registro de Usuario</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
+                            <label id="etNombre">Nombre:</label>
+                            <input type="email" class="form-control" id="txtnombre" aria-describedby="emailHelp" placeholder="  Ingresar Nombre ">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
+                            <label id="etApellidoP">Apellido Paterno:</label>
+                            <input type="email" class="form-control " id="txtapellidop" aria-describedby="emailHelp" placeholder=" Ingresar Apellido Paterno ">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
+                            <label id="etApellidoM">Apellido Materno:</label>
+                            <input type="email" class="form-control" id="txtapellidom" aria-describedby="emailHelp" placeholder=" Ingresar Apellido Materno ">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
+                        <h5>Datos del Hospital</h5>
+                        <hr>
+                    </div>
+                    <!--   <div class="card" style="width: 50rem; height: 15rem;">-->
+                    <!--  <div class="card-body"> -->
+                    <!--   <h5 class="card-title">Datos Del Hospital</h5> -->
+                    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
+                        <button type="button" onclick="ubica()" class="btn btn-outline-primary ">Activar Ubicacion</button>
+                    </div>
+                    <br>
+                    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
+                        <label id="etd">Igresar Direccion</label>
+                    </div>
+                    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3 input-group mb-3">
+                        <input id="direccion" type="text" class="form-control" placeholder="Avenida Juárez, Centro, Pachuca" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button id="buscar" class="btn btn-success " type="button">Buscar</button>
+                        </div>
+                    </div>
+                    <!--  </div>
+                                            </div> -->
+
+                    <br>
+                    <div class="row offset-sm-1">
+                        <div id="mapa" style="width: 40rem; height: 20rem; justify-content: center; align-items: center">
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="offset-sm-10" style="justify-content: end">
+                        {{#link-to "login" class="btn btn-success"}}Comenzar{{/link-to}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{{outlet}}

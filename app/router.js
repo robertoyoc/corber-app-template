@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('principal');
   this.route('crear_plantillas');
   this.route('notificaciones');
+  this.route('login');
+  this.route('registro');
+  this.route('inicio');
+  this.route('soluciones');
 });
 
 export default Router;

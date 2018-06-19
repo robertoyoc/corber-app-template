@@ -1,0 +1,277 @@
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <img style="width:50px;
+                                        height:50px;
+                                        border-radius:50px;
+                                        border:10px sol;
+                                        background-color: rgb(13, 108, 185);" class="img-rounded" src="/media/logo.jpeg">
+            <h4>Hospital General Pachuca</h4>
+        </div>
+        <ul class="list-unstyled">
+            <li class="active">
+                <a href="/#/inicio">
+                    <img style="width:25px;
+                            height:25px;
+                            border-radius:25px;
+                            border:10px sol" src="/media/casa.png"> &nbsp;Home
+                </a>
+                <br>
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <img style="width:25px;
+                            height:25px;
+                            border-radius:25px;
+                            border:10px sol" src="/media/hdd.png"> &nbsp;Espacios de trabajo
+                </a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        {{#link-to "notificaciones" class="btn btn-primary"}}Mantenimiento{{/link-to}}
+                    </li>
+                    <li>
+                        <a href="#" aria-expanded="false">
+                            <img style="width:10px;
+                                        height:10px;
+                                        border-radius:10px;
+                                        border:10px sol" src="/media/cruz.png"> &nbsp;Añadir espacio de trabajo
+                        </a>
+                    </li>
+                </ul>
+                <br>
+                <a href="#">
+                    <img style="width:25px;
+                                height:25px;
+                                border-radius:25px;
+                                border:10px sol" src="/media/Ajustes.png"> Configuracion de los espacios de trabajo
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content Holder -->
+    <div id="content" class="">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-left">
+                    <li class="nav-item active">
+                        <button style="width: 50px; height: 50px;" type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <img width="25px" height="30px" src="/media/menu.png">
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li class="nav-item">
+                        <a href="/#/inicio" style="font-family: Georgia, 'Times New Roman', Times, serif;
+                                    font-size: xx-large">WhiteHub
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <div class="soluciones">
+                        <li>
+                            <a href="/#/soluciones">Ver soluciones</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">Jesus Ruiz
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">
+                                    <img style="width:15px;
+                                                height:15px;
+                                                border:10px sol" src="/media/usuario-negro.png">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img style="width:15px;
+                                                height:15px;
+                                                border:10px sol" src="/media/Ajustes-negro.png"> Settings</a>
+                            </li>
+
+                            <li>
+                                <a href="/#/principal">
+                                    <img style="width:15px;
+                                                height:15px;
+                                                border:10px sol" src="/media/salida-negro.png"> Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <h3 class="py-3" style="color: darkcyan">Casos Resueltos</h3>
+        <div class="card" style="width: 22rem;">
+            <div class="card-body">
+
+                <h5>Buscar por Fecha</h5>
+
+                <div class="card offset-sm-" style="width: 20rem;">
+                    <br>
+                    <div class="offset-lg-1">
+                        <label id="etFecha">Ingresar la Fecha:</label>
+                    </div>
+                    <div class="col-sm-11 col-xl-11 col-lg-11 input-group mb-1">
+                        <input id="txtCalendario" type="text" class="form-control" placeholder=" 23/may/2018" aria-describedby="basic-addon2" style="width: 4rem">
+                        <div class="input-group-append">
+                            <button id="buscar" class="btn btn-primary" type="button">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h6 style="height: 1rem">Creado por: Nombre</h6>
+            </div>
+        </div>
+        <br>
+        <div class="row col-xl-12 col-lg-12">
+            <div class="card" style="width: 17rem;">
+                <span class="border border-success"></span>
+
+                <div class="card text-center">
+                    <div class="card-header">
+
+                        <img width="49px" height="45px" src="/media/paloma-2.png" alt="Ver">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li>
+                                <img style="width:18px;
+                                            height:18px;
+                                            border-radius:25px;
+                                            border:10px sol" src="/media/date.png">&nbsp;&nbsp;9 de Junio del 2018
+                            </li>
+                            <li>
+                                <label>
+                                    <img style="width:18px;
+                                                    height:18px;
+                                                    border-radius:25px;
+                                                    border:10px sol" src="/media/time.png">&nbsp;&nbsp;10:55
+                                </label>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <h5 class="card-title">Nombre del Problema por el usuario</h5>
+                    <p>Una parte de la descripcion de la solucion por el ususario que la realizo...</p>
+                    <a href="#" class="btn btn-outline-primary">Ver Solucion</a>
+                    <div class="card-footer">
+                        <h6 style="height: 1rem">Creado por: Nombre</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card offset-lg-1" style="width: 17rem;">
+                    <span class="border border-success"></span>
+
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <img width="49px" height="45px" src="/media/paloma-2.png" alt="Ver">
+                            <ul class="nav navbar-nav navbar-center">
+                                <li>
+                                    <img style="width:18px;
+                                                    height:18px;
+                                                    border-radius:25px;
+                                                    border:10px sol" src="/media/date.png">&nbsp;&nbsp;9 de Junio del 2018
+                                </li>
+                                <li>
+                                    <label>
+                                        <img style="width:18px;
+                                                            height:18px;
+                                                            border-radius:25px;
+                                                            border:10px sol" src="/media/time.png">&nbsp;&nbsp;10:55
+                                    </label>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <h5 class="card-title">Mi pc se Congela cada 5 minutos</h5>
+                        <p>Formateo de Pc por cuestiones de virus ocasionado por....</p>
+                        <a href="#" class="btn btn-outline-primary">Ver Solucion</a>
+                        <div class="card-footer">
+                            <h6 style="height: 1rem">Creado por: Nombre</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="justify-content: center">
+                <div class="card offset-lg-2" style="width: 17rem;">
+                    <span class="border border-success"></span>
+
+                    <div class="card text-center">
+                        <div class="card-header">
+
+                            <img width="49px" height="45px" src="/media/paloma-2.png" alt="Ver">
+                            <ul class="nav navbar-nav navbar-center">
+                                <li>
+                                    <img style="width:18px;
+                                                    height:18px;
+                                                    border-radius:25px;
+                                                    border:10px sol" src="/media/date.png">&nbsp;&nbsp;9 de Junio del 2018
+                                </li>
+                                <li>
+                                    <label>
+                                        <img style="width:18px;
+                                                            height:18px;
+                                                            border-radius:25px;
+                                                            border:10px sol" src="/media/time.png">&nbsp;&nbsp;10:55
+                                    </label>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <h5 class="card-title">Nombre del Problema</h5>
+                        <p>Una parte de la descripcion de la solucion por el ususario que la realizo...</p>
+                        <br>
+                        <a href="#" class="btn btn-outline-primary">Ver Solucion</a>
+                        <div class="card-footer">
+                            <h6 style="height: 1rem">Creado por: Nombre</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <br>
+                <div class="card" style="width: 17rem;">
+                    <span class="border border-success"></span>
+
+                    <div class="card text-center">
+                        <div class="card-header">
+
+                            <img width="49px" height="45px" src="/media/paloma-2.png" alt="Ver">
+                            <ul class="nav navbar-nav navbar-center">
+                                <li>
+                                    <img style="width:18px;
+                                                    height:18px;
+                                                    border-radius:25px;
+                                                    border:10px sol" src="/media/date.png">&nbsp;&nbsp;9 de Junio del 2018
+                                </li>
+                                <li>
+                                    <label>
+                                        <img style="width:18px;
+                                                            height:18px;
+                                                            border-radius:25px;
+                                                            border:10px sol" src="/media/time.png">&nbsp;&nbsp;10:55
+                                    </label>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <h5 class="card-title">Nombre del Problema</h5>
+                        <p>Una parte de la descripcion de la solucion por el ususario que la realizo...</p>
+                        <br>
+                        <a href="#" class="btn btn-outline-primary">Ver Solucion</a>
+                        <div class="card-footer">
+                            <h6 style="height: 1rem">Creado por: Nombre</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{outlet}}
