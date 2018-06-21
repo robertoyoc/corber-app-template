@@ -1,6 +1,6 @@
 <div class="wrapper">
     <!-- Sidebar -->
-    <div id="sidebar">
+    <div id="sidebar" class="{{if active 'active' 'desactive'}}">
         <div class="sidebar-header">
             <img style="width:50px;
                                         height:50px;
@@ -29,7 +29,7 @@
                         {{#link-to "notificaciones" class="btn btn-primary"}}Mantenimiento{{/link-to}}
                     </li>
                     <li>
-                        <a href="#" aria-expanded="false">
+                        <a href="#exampleModalCenter" data-toggle="modal" aria-expanded="false">
                             <img style="width:10px;
                                         height:10px;
                                         border-radius:10px;
@@ -57,47 +57,50 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-left">
                     <li class="nav-item active">
-                        <button style="width: 50px; height: 50px;" type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                        <button {{action 'toggle'}}style="width: 50px; height: 50px;" type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
                             <img width="25px" height="30px" src="/media/menu.png">
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </li>
                     <li class="nav-item">
-                        <a href="./Inicio.html" style="font-family: Georgia, 'Times New Roman', Times, serif;
-                                font-size: xx-large">WhiteHub
+                        <a href="/#/inicio" style="font-family: Georgia, 'Times New Roman', Times, serif;
+                                    font-size: xx-large">WhiteHub
                         </a>
                     </li>
                 </ul>
+
                 <ul class="navbar-nav ml-auto">
-                    <li>
-                        <a href="/#/soluciones">Ver soluciones</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    </li>
-                    <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-user"></i> John Smith
-                            <b class="caret"></b>
-                        </a>
+                    <div class="soluciones">
+                        <li>
+                            <a href="/#/soluciones">Ver soluciones</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">Jesus Ruiz
+                            <span class="caret"></span>
+                        </button>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-user glyphicon glyphicon-user"></i> Profile</a>
+                                    <img style="width:15px;
+                                                height:15px;
+                                                border:10px sol" src="/media/usuario-negro.png">Profile</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-envelope glyphicon glyphicon-envelope"></i> Inbox
-                                    <span class="badge">7</span>
-                                </a>
+                                    <img style="width:15px;
+                                                height:15px;
+                                                border:10px sol" src="/media/Ajustes-negro.png"> Settings</a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-gear glyphicon glyphicon-gear"></i> Settings</a>
-                            </li>
-                            <li class="divider"></li>
+
                             <li>
                                 <a href="/#/principal">
-                                    <i class="fa fa-power-off glyphicon glyphicon-log-out"></i> Log Out</a>
+                                    <img style="width:15px;
+                                                height:15px;
+                                                border:10px sol" src="/media/salida-negro.png"> Log Out</a>
                             </li>
                         </ul>
-                    </li>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -424,4 +427,109 @@
 
     </div>
 </div>
- {{outlet}}
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Espacio de trabajo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-10  ">
+                        <h6>Ingresa un nombre</h6>
+                        <input type="text" class="form-control"> 
+                    </div>
+                    <div class="col-2 ">
+                        <div class="dropdown" style="margin-left: -70%; margin-right: -1%; margin-top: 40%;">
+                            <button class='btn btn-primary' data-toggle='dropdown' style='position:relative;
+                                left: 40px;
+                                top: -10px;
+                                width: 3rem;
+                                border: 2px solid #73AD21;
+                                padding: 10px;'>
+                                <span class='fa {{icon}}'></span>
+                            </button>
+                            <ul class='dropdown-menu'>
+                                <div class='card' style='width: 61mm;'>
+                                    <div class='card-body' style='border: none'>
+                                        <button {{action 'changeIcon' 'fa-address-book'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-address-book'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-address-card'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-address-card'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-archive'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-archive'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-box'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-box'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-folder-open'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-left: -2px;'>
+                                            <span class='fa fa-folder-open'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-balance-scale'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-balance-scale'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-university'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-university'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-bell'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-bell'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-bookmark'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-bookmark'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-building'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-left: -2px;'>
+                                            <span class='fa fa-building'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-calendar'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-calendar'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-cloud'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-cloud'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-comments'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-comments'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-database'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-database'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-box-open'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-left: -2px;'>
+                                            <span class='fa fa-box-open'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-folder'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-folder'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-chalkboard-teacher'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-chalkboard-teacher'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-inbox'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-inbox'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-sitemap'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-right: 4px;'>
+                                            <span class='fa fa-sitemap'></span>
+                                        </button>
+                                        <button {{action 'changeIcon' 'fa-suitcase'}} class='btn btn-light border border-dark p-1' style='width: 30px; height: 30px; margin-top: -1px; margin-bottom: 8px; margin-left: -2px;'>
+                                            <span class='fa fa-suitcase'></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{outlet}}
