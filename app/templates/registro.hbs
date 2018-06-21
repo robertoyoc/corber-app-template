@@ -56,7 +56,7 @@
                     <div class="row" id="corr">
                         <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
                             <label id="etNombre">Correo:</label>
-{{input type='text' value=textEmail   }}
+                            {{input class="form-control" type='text' value=textEmail }}
 
 
                         </div>
@@ -109,7 +109,7 @@
                     <!--   <h5 class="card-title">Datos Del Hospital</h5> -->
                     <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3
   ">
- 
+
                         <!--||||||||||  Drop Selecionar Hospitales  |||||||||||-->
                         {{#power-select options=cities placeholder="Seleccionar" onchange=(action "chooseDestination") as |name | }} {{name}} {{/power-select}}
                         <br>
@@ -121,17 +121,16 @@
                         <div id="mapa" style="width: 40rem; height: 20rem; justify-content: center; 
 align-items: center">
 
-                           <iframe id="Maps" src="" width="700" height="355" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe id="Maps" src="" width="700" height="355" frameborder="0" style="border:0" allowfullscreen></iframe>
 
                         </div>
                     </div>
                     <br>
                     <br>
                     <div id="btnIniciar" class="offset-sm-10 
-                    "{{action "TipoCorreo" txtEmail}}  style="justify-content: end; display:none;">
-                        <a data-toggle="modal"
-                        data-target="#exampleModal" class="btn btn-success 
-                     " >Comenzar</a>
+                    " {{action "TipoCorreo" txtEmail}} style="justify-content: end; display:none;">
+                        <a data-toggle="modal" data-target="#exampleModal" class="btn btn-success 
+                     ">Comenzar</a>
 
                     </div>
                 </div>
@@ -145,8 +144,8 @@ align-items: center">
 
 
 <!--Modal  [ Envio de verificaion de Correo ]-->
-<div class="modal fade" data-backdrop="static" data-keyboard="false" id="exampleModal" tabindex="-1" role="dialog" 
-aria-labelledby="exampleModalLabel"  aria-hidden="true">
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -163,8 +162,7 @@ aria-labelledby="exampleModalLabel"  aria-hidden="true">
                 </div>
             </div>
             <div class="modal-footer">
-                <a id="btnLogin" type="button"
-                 class="btn btn-success" data-dismiss="modal" onclick="log()">Ok</a>
+                <a id="btnLogin" type="button" class="btn btn-success" data-dismiss="modal" onclick="log()">Ok</a>
 
             </div>
         </div>
@@ -183,7 +181,7 @@ aria-labelledby="exampleModalLabel"  aria-hidden="true">
 
 
 
-  
+
 
 
 </script> {{outlet}}
