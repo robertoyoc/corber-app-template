@@ -1,0 +1,38 @@
+
+<h1>
+    dsadasda
+</h1>
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle"role="button" id="dropHopitales" 
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Seleccionar Hospital
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a  id="slObtetico" class="dropdown-item">Obstetico Pachuca</a>
+    <a id="slGeneral" class="dropdown-item">General de Pachuca</a>
+    <a  id="slSantaMon" class="dropdown-item">Santa Monica pachuca</a>
+  </div>
+</div>
+
+<!--Hospital Obstétrico-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1873.1660269934114!2d-98.774651!3d20.12019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d10a73b6409e29%3A0x914f58299ad73aa1!2sHospital+Obst%C3%A9trico!5e0!3m2!1ses-419!2smx!4v1529449446130" width="700" height="355" frameborder="0" style="border:0" allowfullscreen></iframe>
+<!--Hospital General de Pachuca-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.4139445769083!2d-98.72252484638344!3d20.11339986944395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1a761c4c4e0fb%3A0xde26bbc77015c3c5!2sHospital+General+de+Pachuca!5e0!3m2!1ses-419!2smx!4v1529449537909" width="700" height="355" frameborder="0" style="border:0" allowfullscreen></iframe>
+<!--Hospital Santa Monica pachuca-->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d936.5470424301683!2d-98.73329965942325!3d20.126195845082414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d109ef5d989fc1%3A0xbd6861ae9356bf2c!2sHospital+Santa+Monica!5e0!3m2!1ses-419!2smx!4v1529449629253" width="700" height="355" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+<script>
+  function dd(){
+
+var selText = (document.getElementById('dropHopitales')).options[(document.getElementById('dropHopitales')).selectedIndex].text;
+if(selText==1 || selText=="Obstetico Pachuca"){
+console.log(selText);
+}
+  }
+</script>
+
+
+
