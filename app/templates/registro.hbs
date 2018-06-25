@@ -56,7 +56,7 @@
                     <div class="row" id="corr">
                         <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 offset-sm-3">
                             <label id="etNombre">Correo:</label>
-                            {{input class="form-control" type='text' value=textEmail }}
+                            {{input class="form-control" type='text' value=textEmail change=(action 'checkType' textEmail)}}
 
 
                         </div>
@@ -162,7 +162,7 @@ align-items: center">
                 </div>
             </div>
             <div class="modal-footer">
-                <a id="btnLogin" type="button" class="btn btn-success" data-dismiss="modal" onclick="log()">Ok</a>
+                <button {{action "toLogin"}}>Ok</button>                
 
             </div>
         </div>

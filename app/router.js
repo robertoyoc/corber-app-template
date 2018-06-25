@@ -7,13 +7,21 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('principal');
-  this.route('crear_plantillas');
-  this.route('notificaciones');
   this.route('login');
   this.route('registro');
-  this.route('inicio');
+  this.route('notificaciones');
   this.route('soluciones');
+  this.route('crear_plantillas');
+
+
+
+
+
+  this.route('logged', { path: '/' }, function() {
+  this.route('principal');
+
+    this.route('inicio');
+  });
 });
 
 export default Router;

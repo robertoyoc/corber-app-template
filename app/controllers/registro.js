@@ -22,6 +22,26 @@ export default Controller.extend({
       }
     },
 
+    toLogin(){
+      window.$('#exampleModal').modal('hide')
+      // window.$('body').removeClass('modal-open')
+      // window.$('.modal-backdrop.fade.show').removeAttr('class')
+      this.transitionToRoute('login')
+    },
+    checkType(email){
+      let position = email.search('@')
+      let type = email.substring(position+1, email.length)
+      console.log(type)
+      switch(type){
+        case 'gmail.com':
+          alert('es gmail')
+        default:
+          alert('no se que es')
+      }
+
+
+    },
+
    TipoCorreo (c){
      console.log(c) ;  
    }

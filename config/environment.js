@@ -4,8 +4,8 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'corber-template',
     environment,
-    rootURL: '',
-    locationType: 'hash',
+    rootURL: '/',
+    locationType: 'auto',
     torii: {
       sessionServiceName: 'session'
     },

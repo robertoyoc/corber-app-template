@@ -22,7 +22,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <div class="col-xl-12">
-                        {{#link-to "principal" class="btn btn-primary"}}Home{{/link-to}}
+                        {{#link-to "logged.principal" class="btn btn-primary"}}Home{{/link-to}}
                     </div>
                 </li>
                 <li class="nav-item">
@@ -39,7 +39,7 @@
         </div>
     </nav>
 </div>
-<form id="frmLoginCliente">
+<form id="frmLoginCliente" {{action "send" on='submit'}}>
     <div class="container bg-light">
         <div class="row" style="align-items: center;display: flex;justify-content: center; padding: 3rem">
             <div class="card" style="font-family: Georgia, 'Times New Roman', Times, serif">
@@ -63,8 +63,9 @@
                     <br />
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                            {{#link-to "inicio" class="btn btn-success"}}Ingresar{{/link-to}} 
-                            {{#link-to "principal" class="btn btn-light"}}Cancelar{{/link-to}}
+                            {{!-- {{#link-to "inicio" class="btn btn-success"}}Ingresar{{/link-to}}  --}}
+                            <button type="submit" {{action "send"}}>Ingresar</button>
+                            {{#link-to "logged.principal" class="btn btn-light"}}Cancelar{{/link-to}}
                         </div>
                     </div>
                     <br />
